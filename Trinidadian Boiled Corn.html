@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trinidadian Boiled Corn</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .image-container {
+            display: inline-block;
+            text-align: center;
+            margin-right: 100px;
+            vertical-align: top;
+        }
+
+        .image-text {
+            display: block;
+            margin-top: 0;
+            padding-left: 90px;
+            width: 300px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <h1>Trinidadian Boiled Corn</h1>
@@ -124,11 +140,21 @@
     <hr>
     <h2 style="text-align: center; font-size: 30px; ">What to cook next? Check out some of our other recipes</h2>
 
-    <a href="Roasted Corn, Tomato, and Zucchini Tart.html"target="_blank"><img src="images/roastedCorn1.webp" alt="Roasted Corn, Tomato, and Zucchini Tart" width="300" height="200"></a>
-    <a href="Ultimate French Bread Pizza.html"target="_blank"><img src="images/pizza.webp" alt="Ultimate French Bread Pizza" width="300 height200"></a>
-    <br>
-    <a style="padding-left:240px;" href="Roasted Corn, Tomato, and Zucchini Tart.html"target="_blank">Roasted Corn, Tomato, and Zucchini Tart</a>
-    <a style="padding-left:295px;" href="Ultimate French Bread Pizza.html"target="_blank">Ultimate French Bread Pizza</a>
+    <div class="image-container">
+        <a href="Roasted Corn, Tomato, and Zucchini Tart.html" target="_blank">
+          <img src="images/roastedCorn1.webp" alt="Roasted Corn, Tomato, and Zucchini Tart" width="300" height="200">
+        </a>
+        <br>
+        <a href="Roasted Corn, Tomato, and Zucchini Tart.html" class="image-text">Roasted Corn, Tomato, and Zucchini Tart</a>
+      </div>
+      
+      <div class="image-container">
+        <a href="Ultimate French Bread Pizza.html" target="_blank">
+          <img src="images/pizza.webp" alt="Ultimate French Bread Pizza" width="300" height="200">
+        </a>
+        <br>
+        <a href="Ultimate French Bread Pizza.html" class="image-text">Ultimate French Bread Pizza</a>
+      </div>
 
     <p>You can check out <a style="color: green;" href="Ultimate French Bread Pizza.html">new recipes</a>, <a style="color:slateblue;" href="cookingTips.html">cooking tips</a>, and even <a style="color:purple;" href="addRecipe.html">add your own recipes</a> to help out other beginners!</p>
     
