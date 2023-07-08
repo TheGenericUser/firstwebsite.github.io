@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RecipeHub</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <style>
         body{   
@@ -14,6 +14,26 @@
         img{
             padding-left:150px;
         }
+
+        .image-container {
+            display: inline-block;
+            text-align: center;
+            margin-right: 20px;
+            vertical-align: top;
+        }
+
+        .image-text {
+            display: block;
+            margin-top: 0;
+            padding-left: 140px;
+            width: 300px;
+            text-align: center;
+        }
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -33,14 +53,30 @@
     
     <h2 style="text-align: center; font-size: 30px;">Confused where to start? Check out some of our recipes</h2>
 
-    <a href="Trinidadian Boiled Corn.html" target="_blank"><img src="images/corn.webp" alt="Trinidadian Boiled Corn in a Bowl" width="300" height="200"></a>
-    <a href="Roasted Corn, Tomato, and Zucchini Tart.html" target="_blank"><img src="images/roastedCorn1.webp" alt="Roasted Corn, Tomato, and Zucchini Tart" width="300" height="200"></a>
-    <a href="Ultimate French Bread Pizza.html" target="_blank"><img src="images/pizza.webp" alt="Ultimate French Bread Pizza" width="300 height200"></a>
-    <br>
-    <a style="padding-left:220px;" href="Trinidadian Boiled Corn.html">Trinidadian Boiled Corn</a>
-    <a style="padding-left:240px;" href="Roasted Corn, Tomato, and Zucchini Tart.html">Roasted Corn, Tomato, and Zucchini Tart</a>
-    <a style="padding-left:225px;" href="Ultimate French Bread Pizza.html">Ultimate French Bread Pizza</a>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="image-container">
+        <a href="Trinidadian Boiled Corn.html" target="_blank">
+        <img src="images/corn.webp" alt="Trinidadian Boiled Corn in a Bowl" width="300" height="200">
+        </a>
+        <br>
+        <a href="Trinidadian Boiled Corn.html" class="image-text">Trinidadian Boiled Corn</a>
+      </div>
+      
+      <div class="image-container">
+        <a href="Roasted Corn, Tomato, and Zucchini Tart.html" target="_blank">
+          <img src="images/roastedCorn1.webp" alt="Roasted Corn, Tomato, and Zucchini Tart" width="300" height="200">
+        </a>
+        <br>
+        <a href="Roasted Corn, Tomato, and Zucchini Tart.html" class="image-text">Roasted Corn, Tomato, and Zucchini Tart</a>
+      </div>
+      
+      <div class="image-container">
+        <a href="Ultimate French Bread Pizza.html" target="_blank">
+          <img src="images/pizza.webp" alt="Ultimate French Bread Pizza" width="300" height="200">
+        </a>
+        <br>
+        <a href="Ultimate French Bread Pizza.html" class="image-text">Ultimate French Bread Pizza</a>
+      </div>
+
     
     <footer>
         <p>&copy; 2023 Recipe Collection. All rights reserved.</p>
