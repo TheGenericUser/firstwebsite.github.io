@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Recipe</title>
+    <style>
+        b{
+            font-size: 20px;
+            color: white;
+        }
+        body{
+            background: rgb(191, 169, 213) url(images/food.jpg) no-repeat;
+            background-size:950px;
+            background-position: right;
+        }
+
+    </style>
+</head>
+<body>                  
+    <form id="recipe-form" onsubmit="submitForm()">
+        <h2 style="text-align: center;">Add your recipe!</h2>
+        <b>Name of the Recipe:</b>
+        <input type="text" size="40">
+        <br><br>
+        <b>About the Recipe: </b>
+        <br>
+        <textarea name="about" style="width: 35%;" rows="3"></textarea>
+        <br><br>
+        <b>Upload Image(optional)</b>
+        <br><br>
+        <input type="file" name="image" accept="image/*">
+        <br><br><br>
+        <div>
+        <b>Recipe:</b>
+        <br><br>
+        <b>Prep Time (mins):</b>
+        <select id="prep-time">
+        <script>
+            var a = 1;
+            while (a <= 30) {
+            document.write("<option>" + a + "</option>");
+            a++;
+            }
+        </script>
+        </select>
+        
+        <b>Cooking Time (mins):</b>
+        <select id="cooking-time">
+        <script>
+            var a = 1;
+            while (a <= 600) {
+            document.write("<option>" + a + "</option>");
+            a++;
+            }
+        </script>
+        </select>
+    
+        <br><br>
+        <b>Total Time (mins):</b>
+        <b id="total-time">2</b>
+    
+        <script>
+    
+        var prepTimeDropdown = document.getElementById("prep-time");
+        var cookingTimeDropdown = document.getElementById("cooking-time");
+        var totalTimeElement = document.getElementById("total-time");
+    
+        function updateTotalTime() {
+            var prepTime = parseInt(prepTimeDropdown.value, 10);
+            var cookingTime = parseInt(cookingTimeDropdown.value, 10);
+            var totalTime = prepTime + cookingTime;
+            totalTimeElement.textContent = totalTime;
+        }
+    
+        updateTotalTime();
+    
+        prepTimeDropdown.addEventListener("change", updateTotalTime);
+        cookingTimeDropdown.addEventListener("change", updateTotalTime);
+        </script>
+    
+        <br><br>
+        <b>Servings:</b>
+        <select>
+        <script>
+            var a = 1;
+            while (a <= 20) {
+            document.write("<option>" + a + "</option>");
+            a++;
+            }
+        </script>
+        </select>
+        <br><br>
+    
+        <b>Ingredients(enter for next ingredient)</b>
+        <br><br>
+        <textarea name="ingredients" style="width: 35%;" rows="15"></textarea>
+    
+        <br><br>
+        <b>Method:</b>
+        <br><br>
+        <button id="add-recipe-button" onclick="addNewTextarea(event)">Add Recipe</button>
+        <div id="recipe-container"></div>
+    
+        <script>
+        var recipeContainer = document.getElementById("recipe-container");
+        var recipeCounter = 1;
+    
+        function addNewTextarea(event) {
+            event.preventDefault();
+    
+            var textarea = document.createElement("textarea");
+            textarea.id = "recipe-" + recipeCounter; 
+            textarea.name = "recipe" + recipeCounter;
+            textarea.rows = "4";
+            textarea.cols = "50";
+    
+            var serialNumber = document.createElement("span");
+            serialNumber.textContent = recipeCounter + ":";
+    
+            recipeContainer.appendChild(serialNumber);
+            recipeContainer.appendChild(textarea);
+            recipeContainer.appendChild(document.createElement("br"));
+    
+            recipeCounter++;
+        }
+        </script>
+        <div style="text-align: center;">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+        </div>
+        <script>
+        function submitForm() {
+          alert("Form submitted!");
+      
+          setTimeout(function() {
+            document.getElementById("recipe-form").submit();
+          }, 0);
+        }
+      </script>  
+    
+        </div>
+        </form>
+<p>Check out our <a href="about.html" target="_blank">about page</a></p>    
+</body>
+</html>

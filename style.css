@@ -1,0 +1,33 @@
+h1{
+    text-align: center;
+}
+p{
+    font-size: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: aliceblue;
+}
+div{
+    display: flex; flex-wrap: wrap;
+}
+.recipe{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 15%; flex-basis: 50%;
+}
+img{
+    padding-left: 15%;
+}
+ul, ol{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+ol li{
+    font-size: 20px;            
+}
+hr{
+    flex-basis: 30%; 
+    padding-left: 50%;
+}
+ol img{
+    padding-left: 0%;
+}
